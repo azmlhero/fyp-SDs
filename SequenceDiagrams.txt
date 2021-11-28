@@ -1,0 +1,22 @@
+// Works on mermaid.live
+
+// E Commerce Sequence Diagram
+sequenceDiagram
+    User->>+E_Commerce: Register
+    E_Commerce-->>-User: Logged In
+    E_Commerce->>+Customer: Verify 
+    Customer->>+Customer: checkAccount()
+    Customer->>+Product: getProductInfo
+    Product->>-Customer: DisplayProctInfo
+
+    Product->>+DB: Search In DB
+    DB->>-Product: Provide Produvt Info
+
+    E_Commerce->>+Customer: Dispplay To Custoemer
+    Customer->>+Product: Buy Product
+    Customer->>+E_Commerce: Payment
+    E_Commerce->>+Customer: Verify    
+    E_Commerce->>+Customer: Payment Verification Mail 
+    E_Commerce->>+Customer: Deliver Product
+    Customer->>+E_Commerce: Log Out 
+
